@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 # ignore important keys
-.env
+firebaseConfig.js
