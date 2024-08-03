@@ -166,7 +166,7 @@ export default function Home() {
           mb={2}
         >
           <Typography variant="h4">
-            Inventory Items
+            Pantry Items
           </Typography>
         </Box>
         <Stack spacing={2} sx={{ maxHeight: 300, overflow: 'auto' }}>
