@@ -3,8 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
+
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyCj_mXuK-NLSJuOWqjaDH9pHFrarfYN8sQ",
   authDomain: "inventory-management-app-9d886.firebaseapp.com",
@@ -19,4 +23,11 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const firestore = getFirestore(app);
 
-export { firestore };
+if (typeof window !== "undefined") {
+  // Initialize Firebase only if window is defined (i.e., client-side)
+  app = initializeApp(firebaseConfig);
+  analytics = getAnalytics(app);
+  firestore = getFirestore(app);
+}
+
+export { app, analytics, firestore };
