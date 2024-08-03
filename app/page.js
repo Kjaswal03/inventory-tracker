@@ -93,7 +93,7 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
       sx={{
-        backgroundImage: `url('/homedepot.jpg')`,
+        backgroundImage: `url('/pantry.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         bgcolor: 'background.default',
